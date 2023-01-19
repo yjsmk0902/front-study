@@ -31,12 +31,22 @@
       </p>
     </header>
 
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone number" />
-      <input type="password" placeholder="Password" />
-      <input type="submit" value="Log In" />
-      <input type="submit" value="Sign Up" />
-      <a href="#">Find Kakao Account or Password</a>
+    <form action="friends.html" method="get" class="login-form">
+      <input
+        class="login-form__input"
+        type="text"
+        placeholder="Email or phone number"
+        name="username"
+      />
+      <input
+        class="login-form__input"
+        type="password"
+        placeholder="Password"
+        name="password"
+      />
+      <input class="login-form__btn" type="submit" value="Log In" />
+      <input class="login-form__btn" type="submit" value="Sign Up" />
+      <a class="login-form__anchor" href="#">Find Kakao Account or Password</a>
     </form>
 
     <script
