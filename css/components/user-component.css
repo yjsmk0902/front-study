@@ -35,8 +35,19 @@
   font-size: 18px;
 }
 
-.user-component__subtitle {
+.user-component__sub {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 5px;
+}
+
+.user-component__sub span {
+  margin-left: 8px;
+  color: red;
+}
+
+.user-component__subtitle {
   font-size: 17px;
   color: var(--gray);
 }
