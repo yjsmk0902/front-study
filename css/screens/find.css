@@ -25,11 +25,14 @@
   margin-bottom: 25px;
 }
 
+.open-post:not(:last-child) {
+  border-bottom: var(--main-border);
+}
+
 .open-post {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: var(--main-border);
   padding-bottom: 13px;
   margin-bottom: 13px;
 }

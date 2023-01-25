@@ -1,0 +1,27 @@
+#settings-screen .status-bar,
+#settings-screen .alt-header {
+  background-color: white;
+}
+
+.settings-list:not(:last-child) {
+  border-bottom: var(--main-border);
+}
+
+.settings-setting {
+  font-size: 25px;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-setting i {
+  margin-right: 15px;
+}
+
+.settings-setting:not(:last-child) {
+  border-bottom: var(--main-border);
+}
+
+.settings-setting__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+}

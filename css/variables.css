@@ -4,5 +4,6 @@
   --gray: rgba(0, 0, 0, 0.3);
 
   --horizontal-space: 25px;
+  --vertical-space: 120px;
   --main-border: 1px solid rgba(0, 0, 0, 0.1);
 }
