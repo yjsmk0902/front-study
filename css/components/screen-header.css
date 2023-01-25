@@ -22,3 +22,20 @@
 .screen-header__icons-dot {
   position: relative;
 }
+
+@keyframes rotateGear {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateGear 3s ease-in-out infinite;
+}
+
+.screen-header__icons i:hover {
+  opacity: 0.6;
+}
