@@ -1,24 +1,32 @@
-import Button from "./Button";
-import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
-function Hello() {
-  const createFn = () => {
-    console.log("created!");
-    return destroyFn;
-  };
-  const destroyFn = () => console.log("destroyed!");
-  useEffect(createFn, []);
-  return <h1>Hello</h1>;
-}
-
 function App() {
-  const [showing, setShowing] = useState(false);
-  const onClick = () => setShowing((prev) => !prev);
+  const [toDo, setToDo] = useState("");
+  const [toDos, setToDos] = useState([]);
+  const onChange = (event) => setToDo(event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo === "") {
+      return;
+    }
+    setToDos((currentArray) => [toDo, ...currentArray]);
+    setToDo("");
+  };
+  useEffect(() => {
+    console.log(toDos);
+  }, [toDos]);
   return (
     <div>
-      {showing ? <Hello /> : null}
-      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
+      <h1>To Do List ({toDos.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input
+          type="text"
+          onChange={onChange}
+          value={toDo}
+          placeholder="할 일을 입력하세요..."
+        />
+        <button>할 일 추가하기</button>
+      </form>
     </div>
   );
 }
