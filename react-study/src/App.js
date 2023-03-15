@@ -27,6 +27,12 @@ function App() {
         />
         <button>할 일 추가하기</button>
       </form>
+      <hr />
+      <ul>
+        {toDos.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
